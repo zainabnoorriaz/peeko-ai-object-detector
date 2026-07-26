@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Peeko • Detection Result</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/result.css">
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <div class="hero">
+        <h1>Peeko</h1>
+        <p>Your image has been analyzed.</p>
+    </div>
+
+    <div class="content">
+
+        <section class="polaroid">
+            <div class="pin"></div>
+            <div class="photo">
+                <div class="placeholder">📷</div>
+            </div>
+            <div class="caption">Uploaded Image</div>
+        </section>
+
+        <section class="details-box">
+            <h2>🔎 Detection Results</h2>
+            <div class="results-area">
+                <!-- populated by result.js -->
+            </div>
+            <button class="try-again-btn" id="tryAgainBtn">Try Another Image</button>
+        </section>
+
+    </div>
+
+</div>
+
+<script src="/static/result.js"></script>
+
+</body>
+</html>

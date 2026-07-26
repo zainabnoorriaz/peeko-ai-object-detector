@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peeko — the Image Detective</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <!-- FastAPI Static CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<main class="stage">
+
+    <div class="card" id="card">
+
+        <!-- Mascot -->
+        <div class="mascot" id="mascot" aria-hidden="true">
+
+            <div class="mascot-brow brow-l" id="browL"></div>
+            <div class="mascot-brow brow-r" id="browR"></div>
+
+            <div class="eye eye-l">
+                <div class="pupil" id="pupilL"></div>
+                <div class="lid" id="lidL"></div>
+            </div>
+
+            <div class="eye eye-r">
+                <div class="pupil" id="pupilR"></div>
+                <div class="lid" id="lidR"></div>
+            </div>
+
+            <svg
+                class="mouth"
+                id="mouth"
+                viewBox="0 0 40 16"
+                width="40"
+                height="16">
+
+                <path
+                    id="mouthPath"
+                    d="M4 4 Q20 14 36 4"
+                    fill="none"
+                    stroke-width="3"
+                    stroke-linecap="round"/>
+            </svg>
+
+        </div>
+
+        <!-- Heading -->
+        <div class="headline">
+
+            <h1>Peeko</h1>
+
+            <p class="tagline" id="tagline">
+                Upload an image. I'll find what's inside.
+            </p>
+
+        </div>
+
+        <!-- Upload -->
+        <div
+            class="dropzone"
+            id="dropzone"
+            tabindex="0"
+            role="button"
+            aria-label="Upload an image to scan">
+
+            <input
+                type="file"
+                id="fileInput"
+                accept="image/*"
+                hidden>
+
+            <div class="dropzone-inner" id="dropzoneInner">
+
+                <svg
+                    class="icon-upload"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+
+                    <path d="M12 16V4M12 4L7 9M12 4l5 5"/>
+                    <path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
+
+                </svg>
+
+                <p class="drop-label">
+                    Drop an image here, or tap to browse
+                </p>
+
+                <p class="drop-sub">
+                    JPG, PNG, or WEBP
+                </p>
+
+            </div>
+
+            <img
+                class="preview"
+                id="preview"
+                alt="Preview Image">
+
+            <div class="scanline" id="scanline"></div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="actions">
+
+            <button
+                class="btn btn-primary"
+                id="scanBtn"
+                disabled>
+
+                Ask Peeko
+
+            </button>
+
+            <button
+                class="btn btn-ghost"
+                id="resetBtn"
+                hidden>
+
+                Try another
+
+            </button>
+
+        </div>
+
+        <!-- Results -->
+        <div
+            class="result"
+            id="result"
+            hidden>
+
+            <div class="result-head">
+
+                <span
+                    class="verdict-badge"
+                    id="verdictBadge">
+
+                    Likely AI-generated
+
+                </span>
+
+                <span
+                    class="confidence-num"
+                    id="confidenceNum">
+
+                    92%
+
+                </span>
+
+            </div>
+
+            <div class="meter">
+                <div
+                    class="meter-fill"
+                    id="meterFill">
+                </div>
+            </div>
+
+            <div class="chips" id="chips">
+
+                <span class="chip">Unnatural texture</span>
+                <span class="chip">No sensor noise</span>
+                <span class="chip">Suspicious edges</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <p class="footnote">
+        Peeko takes an educated guess — always double-check before trusting a verdict.
+    </p>
+
+</main>
+
+<!-- FastAPI Static JavaScript -->
+<script src="/static/script.js"></script>
+
+</body>
+</html>

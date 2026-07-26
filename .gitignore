@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+
+static/uploads/*
+!static/uploads/.gitkeep
+
+static/results/*
+!static/results/.gitkeep
+
+yolov8n.pt
+yolov8s.pt
