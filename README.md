@@ -34,6 +34,33 @@ peeko/
     ├── index.html          # Upload page
     └── result.html          # Detection result page
 ```
+## 📸 Project Screenshots
+
+### 1️⃣ User Interface
+The homepage where users can upload an image for AI analysis.
+
+![User Interface](assets/01.interface.png)
+
+---
+
+### 2️⃣ Processing Image
+The application processes the uploaded image before sending it to the AI model.
+
+![Processing](assets/02.processing.png)
+
+---
+
+### 3️⃣ Detection Results
+The AI displays the detected objects along with confidence scores.
+
+![Detection Results](assets/03.results.png)
+
+---
+
+### 4️⃣ Image Analysis
+A detailed analysis of the uploaded image is presented to the user.
+
+![Image Analysis](assets/04.analysis.png)
 
 ## How It Works
 
